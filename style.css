@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root {
+    --mcd-red: #db0007;
+    --mcd-yellow: #ffbc0d;
+    --mcd-white: #ffffff;
+    --mcd-bg: #f5f5f5;
+    --mcd-text: #292929;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--mcd-bg);
+}
+
+header {
+    background-color: var(--mcd-red);
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.container-button {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    background-color: var(--mcd-yellow);
+    border: none;
+    border-radius: 8px;
+    color: var(--mcd-text);
+    width: 160px;
+    height: 65px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.2;
+}
+
+button:hover {
+    background-color: #f0b000;
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+li {
+    background-color: var(--mcd-white);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e1e1e1;
+    transition: transform 0.3s;
+}
+
+li:hover {
+    transform: scale(1.02);
+}
+
+img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-weight: 600;
+    color: var(--mcd-text);
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.item-price {
+    color: var(--mcd-red);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+@media (max-width: 900px) {
+    ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    .container-button {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
